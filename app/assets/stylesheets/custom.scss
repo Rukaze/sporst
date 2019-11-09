@@ -1,0 +1,37 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding: 100px 5% 0 5%;
+  
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+#logo{
+  font-size:40px;
+}
+
+/* home */
+
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
