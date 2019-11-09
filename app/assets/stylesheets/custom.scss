@@ -1,4 +1,4 @@
-@import "bootstrap-sprockets";
+
 @import "bootstrap";
 
 /* universal */
@@ -26,12 +26,32 @@ textarea {
 
 #logo{
   font-size:40px;
+  color:white;
 }
+
+#header{
+   background-color:#afeeee;
+}
+
+
 
 /* home */
 
-.img-responsive {
-  display: block;
-  height: auto;
-  max-width: 100%;
+
+.sports_index{
+  display:flex;
+
+  .baseball, .basketball{
+  position:relative;
+  margin:10px;
+  
+    h2{
+      position:absolute;
+      top:0;
+      left:0;
+      font-size:40px;
+      color:white;
+    }
+  
+  }
 }
