@@ -1,10 +1,10 @@
 
-@import "bootstrap";
+
 
 /* universal */
 
 body {
-  padding: 100px 5% 0 5%;
+  padding: 10px 5% 0 5%;
   
 }
 
@@ -31,6 +31,11 @@ textarea {
 
 #header{
    background-color:#afeeee;
+   padding: 20px 0 20px 0;
+   li{
+     font-size:20px;
+     display:flex;
+   }
 }
 
 
@@ -44,19 +49,19 @@ textarea {
   .baseball, .basketball{
   position:relative;
   margin:10px;
+  width:50%;
   
     h2{
       position:absolute;
       top:0;
       left:0;
       font-size:40px;
-      color:white;
+      color:navy;
     }
     img{
-      display:block;
-      width:370px;
-      overflow: hidden;
-      height:280px;
+      height:100%;
+      width:100%;
+      
       
     }
   }
