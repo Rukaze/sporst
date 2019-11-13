@@ -1,13 +1,17 @@
 <p>
 <%= form_for(@post, url: create_path) do |f| %>
+  スポーツの種類
   <%= f.select :kind, [["baseball", "baseball"], ["basketball", "basketball"]] %>
-  
+  <br>
+  <br>
   <%= f.label :title %>
   <%= f.text_field :title %>
-
+  <br>
+  <br>
   <%= f.label :content %>
   <%= f.text_area :content%>
-  
+  <br>
+  <br>
   <%= f.submit "新規投稿" %>
 <%end%>
 </p>
