@@ -4,6 +4,7 @@
   <% @posts.each do |post| %> 
     <%= link_to( "baseball/#{post.id}/show") do  %>
       <%= post.title %>
+      <br>
     <% end %>
   <% end %>
 </p>
