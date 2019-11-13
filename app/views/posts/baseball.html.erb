@@ -1,6 +1,9 @@
-<h1>Posts#baseball</h1>
+<% provide(:title, "baseball" ) %>
+<h1>baseball</h1>
 <p>
   <% @posts.each do |post| %> 
-  <%= post.title %>
+    <%= link_to( "baseball/#{post.id}/show") do  %>
+      <%= post.title %>
+    <% end %>
   <% end %>
 </p>
