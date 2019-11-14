@@ -1,13 +1,10 @@
 class PostsController < ApplicationController
-  def baseball
-    @posts = Post.where(kind: "baseball")
-    @post = @posts.first
+  def index
+    @posts = Post.where(kind: params[:kind])
+    @post_kind = params[:kind]
   end
 
-  def basketball
-    @posts = Post.where(kind: "basketball")
-  end
-  
+ 
   def show
     @post = Post.find(params[:id])
   end

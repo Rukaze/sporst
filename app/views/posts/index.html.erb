@@ -1,12 +1,11 @@
-
-<% provide(:title, "#{@post.kind}" ) %>
+<% provide(:title, "#{@post_kind}" ) %>
 <div class = "title">
-  <h1> <%= "#{@post.kind}" %> </h1>
+  <h1> <%= "#{@post_kind}" %> </h1>
 </div>
 <div class = "title-index">
   <p>
     <% @posts.each do |post| %> 
-      <%= link_to( "#{post.kind}/#{post.id}/show") do  %>
+      <%= link_to( "posts/#{post.id}/show") do  %>
         <%= post.title %>  <%= post.created_at.in_time_zone('Tokyo')%>
         <br>
       <% end %>

@@ -1,7 +1,7 @@
 <p>
 <%= form_for(@post, url: create_path) do |f| %>
   スポーツの種類
-  <%= f.select :kind, [["baseball", "baseball"], ["basketball", "basketball"]] %>
+  <%= f.select :kind, [["baseball", "baseball"], ["basketball", "basketball"],["soccer", "soccer"]] %>
   <br>
   <br>
   <%= f.label :title %>
