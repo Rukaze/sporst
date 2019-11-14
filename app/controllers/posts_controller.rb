@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def baseball
     @posts = Post.where(kind: "baseball")
+    @post = @posts.first
   end
 
   def basketball

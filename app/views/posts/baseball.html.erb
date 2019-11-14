@@ -1,10 +1,16 @@
-<% provide(:title, "baseball" ) %>
-<h1>baseball</h1>
-<p>
-  <% @posts.each do |post| %> 
-    <%= link_to( "baseball/#{post.id}/show") do  %>
-      <%= post.title %>
-      <br>
+
+<% provide(:title, "#{@post.kind}" ) %>
+<div class = "title">
+  <h1> <%= "#{@post.kind}" %> </h1>
+</div>
+<div class = "title-index">
+  <p>
+    <% @posts.each do |post| %> 
+      <%= link_to( "#{post.kind}/#{post.id}/show") do  %>
+        <%= post.title %>  <%= post.created_at.in_time_zone('Tokyo')%>
+        <br>
+      <% end %>
+      
     <% end %>
-  <% end %>
-</p>
+  </p>
+</div>
