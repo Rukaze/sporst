@@ -4,8 +4,8 @@
 </div>
 <div class = "league">
   
-  <%= @leagues.each do |l| %>
-    <%= link_to( "sports/#{l.kind}/#{l.league}/") do  %>
+  <% @leagues.each do |l| %>
+    <%= link_to( "/#{@post_kind}/#{l.league}/") do  %>
       <%= l.league %> 
           
     <% end %>

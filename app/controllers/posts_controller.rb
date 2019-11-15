@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   def league
     @post_kind = params[:kind]
-    @leagues = Post.where(kind: @post_kind)
+    @many_leagues = Post.where(kind: @post_kind)
+    @leagues = @many_leagues.select(:league).distinct
+
   end
   
   def index
