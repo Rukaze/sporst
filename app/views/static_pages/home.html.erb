@@ -1,12 +1,16 @@
-<h1>スポーツ一覧</h1>
-<div class = "sports_index">
-  <div class="baseball">  
-    <a href="sports/baseball"><img src="/sports_images/baseball.jpg" alt="" class=""></a>
-    <a href="sports/baseball"><h2>baseball</h2></a>
-  </div> 
-  <div class="basketball">  
-    <a href="sports/basketball"><img src="/sports_images/basketball.jpg" alt="" class=""></a>
-    <a href="sports/basketball"><h2>basketball</h2></a>
-  </div> 
-  <a href="sports/soccer"><h2>soccer</h2></a>
+<div class = "content">  
+  <h1>スポーツ一覧</h1>
+  <div class = "sports_index">
+    <% @sports.each do |s| %>
+      <div class="<%= s.kind %>">  
+        <%= link_to( "sprots/#{s.kind}") do  %>
+                <p><%= s.kind %> </p>
+          
+        <% end %>
+        <a><%= link_to  image_tag("/sports_images/#{s.kind}.jpg"), "sprots/#{s.kind}" %></a>
+      </div>
+    <% end %>    
+       
+     
+  </div>
 </div>

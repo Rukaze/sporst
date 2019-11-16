@@ -43,30 +43,58 @@ textarea {
 /* home */
 
 
+/*
 .sports_index{
-  display:flex;
+   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+  margin: 70px auto 0 auto;
+}
+.baseball, .basketball{
+border: 1px solid black;
 
+width: 30%;
+height: auto;
+margin-bottom: 30px;
+
+
+  p{
+    padding: 0px 10px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+*/
+
+
+.sports_index{
+   display:flex;
+   flex-wrap:wrap;
+   margin: 70px auto 0 auto;
+   width:100%;
+   margin:0px auto;
+   
   .baseball, .basketball{
   position:relative;
-  margin:10px;
-  width:50%;
+  margin:0;
+  width:33%;
+    
   
-    h2{
+ 
+    p{
       position:absolute;
       top:0;
       left:0;
-      font-size:40px;
+      font-size:30px;
       color:navy;
     }
     img{
-      height:100%;
-      width:100%;
-      
-      
+    width: 100%;
+    height: 100%;
     }
   }
 }
 
-.league #text{
-  display:none;
-}
