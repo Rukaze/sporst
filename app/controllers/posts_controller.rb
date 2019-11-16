@@ -18,6 +18,8 @@ class PostsController < ApplicationController
   
   def new
     @post = Post.new
+    @kind = params[:kind]
+    @leagues = Sport.where(kind: @kind)
   end
   
   def create
@@ -26,7 +28,11 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
   
+  def select_sports
+    @sports = Sport.select(:kind).distinct
+  end
+  
   def posts_params
-    params.require(:post).permit(:kind,:content,:title)
+    params.require(:post).permit(:kind,:content,:title,:league)
   end
 end

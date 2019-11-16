@@ -1,7 +1,12 @@
 <p>
 <%= form_for(@post, url: create_path) do |f| %>
-  スポーツの種類
-  <%= f.select :kind, [["baseball", "baseball"], ["basketball", "basketball"],["soccer", "soccer"]] %>
+  
+  選んだスポーツ
+  <%= f.select :kind , [["#{@kind}", "#{@kind}"]] %>(変更するなら戻ってね）
+  
+  <br>
+  投稿したいリーグ
+  <%= f.collection_select :league, @leagues, :league ,:league %>
   <br>
   <br>
   <%= f.label :title %>
