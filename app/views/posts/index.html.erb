@@ -6,7 +6,7 @@
   <p>
     <% @posts.each do |post| %> 
       <%= link_to( "posts/#{post.id}/show") do  %>
-        <%= post.title %>  <%= post.created_at.in_time_zone('Tokyo')%>
+        <%= post.title %>  <%= l post.created_at, format: :short %>
         <br>
       <% end %>
       

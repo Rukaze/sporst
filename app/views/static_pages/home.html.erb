@@ -2,12 +2,12 @@
   <h1>スポーツ一覧</h1>
   <div class = "sports_index">
     <% @sports.each do |s| %>
-      <div class="<%= s.kind %>">  
-        <%= link_to( "sprots/#{s.kind}") do  %>
+      <div class="sports_images">  
+        <%= link_to( "sports/#{s.kind}") do  %>
                 <p><%= s.kind %> </p>
           
         <% end %>
-        <a><%= link_to  image_tag("/sports_images/#{s.kind}.jpg"), "sprots/#{s.kind}" %></a>
+        <a><%= link_to  image_tag("/sports_images/#{s.kind}.jpg"), "sports/#{s.kind}" %></a>
       </div>
     <% end %>    
        
