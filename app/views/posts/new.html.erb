@@ -1,11 +1,20 @@
 <div id = "new-post">
-  <%= form_for(@post, url: {controler: "posts", action: "create" }) do |f| %>
+  <p>
+<% @sports.each do |sport|  %>
+  <%= link_to(new_content_path(kind: "#{sport.kind}")) do %>
+    <%= sport.kind %>  
+        <br>
+  <% end %>
+<% end %>
+</p>
+  <%= form_for(@post, url: create_path) do |f| %>
     <ul>
       <li>
         選んだスポーツ
       </li>
       <li>
         <%= @kind %>
+        <%= f.hidden_field :kind, :value => @kind %>
       </li>
       
       <li>
