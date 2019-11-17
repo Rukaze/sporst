@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/:kind/:league" => "posts#index"
   
   
-  post "/create" => "posts#create" 
+  post "/create/:kind" => "posts#create" 
    
   root "static_pages#home"
   get "about" => "static_pages#about"

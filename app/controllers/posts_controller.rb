@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(posts_params)
+    @post.kind = params[:kind]
     @post.save
     redirect_to root_path
   end
@@ -34,5 +35,6 @@ class PostsController < ApplicationController
   
   def posts_params
     params.require(:post).permit(:kind,:content,:title,:league)
+    
   end
 end

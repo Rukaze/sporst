@@ -1,23 +1,34 @@
-<p>
-<%= form_for(@post, url: create_path) do |f| %>
-  
-  選んだスポーツ
-  <%= f.select :kind , [["#{@kind}", "#{@kind}"]] %>(変更するなら戻ってね）
-  
-  <br>
-  投稿したいリーグ
-  <%= f.collection_select :league, @leagues, :league ,:league %>
-  <br>
-  <br>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <br>
-  <br>
-  <%= f.label :content %>
-  <%= f.text_area :content%>
-  <br>
-  <br>
-  <%= f.submit "新規投稿" %>
-<%end%>
-</p>
+<div id = "new-post">
+  <%= form_for(@post, url: {controler: "posts", action: "create" }) do |f| %>
+    <ul>
+      <li>
+        選んだスポーツ
+      </li>
+      <li>
+        <%= @kind %>
+      </li>
+      
+      <li>
+        投稿したいリーグ
+      </li>
+      <li>
+        <%= f.collection_select :league, @leagues, :league ,:league %>
+      </li>
+      <li>
+        <%= f.label :title %>
+      </li>
+      <li>
+        <%= f.text_field :title %>
+      </li>
+      <li>
+        <%= f.label :content %>
+      </li>
+      <li>
+        <%= f.text_area :content%>
+      </li>
+        <li><%= f.submit "新規投稿" %>
+      </li>
+    </ul>
+  <% end %>
+</div>
 
