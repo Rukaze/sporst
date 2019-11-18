@@ -5,7 +5,7 @@
 <div class = "title-index">
   <p>
     <% @posts.each do |post| %> 
-      <%= link_to( "posts/#{post.id}/show") do  %>
+      <%= link_to( show_path(id: post.id)) do  %>
         <%= post.title %>  <%= l post.created_at, format: :short %>
         <br>
       <% end %>

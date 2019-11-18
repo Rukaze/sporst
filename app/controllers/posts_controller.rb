@@ -25,8 +25,14 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(posts_params)
-    @post.save
-    redirect_to root_path
+    if @post.save
+      redirect_to index_path(league: @post.league)
+    else
+      @kind = @post.kind
+      @sports = Sport.select(:kind).distinct
+      @leagues = Sport.where(kind: @kind)
+      render :new 
+    end
   end
   
   

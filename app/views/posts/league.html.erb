@@ -1,11 +1,11 @@
-<% provide(:title, "#{@post_kind}" ) %>
+<% provide(:title, @post_kind ) %>
 <div class = "title">
-  <h1> <%= "#{@post_kind}" %> </h1>
+  <h1> <%= @post_kind %> </h1>
 </div>
 <div class = "league">
   
   <% @leagues.each do |l| %>
-    <%= link_to( "/#{@post_kind}/#{l.league}/") do  %>
+    <%= link_to( index_path(league: l.league)) do  %>
       <%= l.league %> 
           <br>
     <% end %>
