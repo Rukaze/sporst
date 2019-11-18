@@ -7,10 +7,10 @@
                 <p><%= s.kind %> </p>
           
         <% end %>
-        <a><%= link_to  image_tag("/#{s.kind}.jpg"), sports_path(kind: s.kind) %></a>
+        <%= link_to  image_tag("/#{s.kind}.jpg"), sports_path(kind: s.kind) %>
       </div>
     <% end %>    
        
-     
+     <a href="/sports?kind=baseball"><img src="/baseball.jpg" alt="Baseball" /></a>
   </div>
 </div>
