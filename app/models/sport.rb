@@ -1,3 +1,3 @@
 class Sport < ApplicationRecord
-  validates :league,presence: true , uniqueness: true
+  validates :league, uniqueness: true, presence: true 
 end
