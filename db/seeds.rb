@@ -10,7 +10,7 @@
   ['soccer', 'Laliga'],
   ['baseball', 'NPB'],
   ['baseball', 'MLB'],
-  ['その他スポーツ', '空手']
+  ['other sports', '空手']
 ].each do |kind, league|
   Sport.create!(
     { kind: kind, league: league }
