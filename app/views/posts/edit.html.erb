@@ -1,0 +1,25 @@
+<div class = "new-post"> 
+  <%= form_for(@post, url: post_path(id: @post.id)) do |f| %>
+    <%= render "shared/error_messages", model: f.object %>
+    <ul>
+      <li>
+        <%= @post.kind %>  <%= @post.league %>
+         
+      </li>
+      <li>
+        <%= f.label :title %>
+      </li>
+      <li>
+        <%= f.text_field :title, value: @post.title %>
+      </li>
+      <li>
+        <%= f.label :content %>
+      </li>
+      <li>
+        <%= f.text_area :content,value: @post.content %>
+      </li>
+        <li><%= f.submit "編集する" %>
+      </li>
+    </ul>
+  <% end %>
+</div>  

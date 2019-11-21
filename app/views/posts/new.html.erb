@@ -1,12 +1,10 @@
-<div id = "new-post">
-  <p>
-<% @sports.each do |sport|  %>
-  <%= link_to(new_content_path(kind: sport.kind)) do %>
-    <%= sport.kind %>  
-        <br>
+<div class = "new-post">
+  <% @sports.each do |sport|  %>
+    <%= link_to(new_content_path(kind: sport.kind)) do %>
+      <%= sport.kind %>  
+      <br>
+    <% end %>
   <% end %>
-<% end %>
-</p>
   <%= form_for(@post, url: create_path) do |f| %>
   <%= render "shared/error_messages", model: f.object %>
     <ul>

@@ -35,10 +35,22 @@ class PostsController < ApplicationController
     end
   end
   
+  def edit
+    @post = Post.find(params[:id])
+  end
+  
+  def update
+    @post =  Post.find(params[:id])
+    if @post.update(posts_params)
+      redirect_to show_path(id: @post.id)
+    else
+      render :edit 
+    end
+    
+  end
   
   
   def posts_params
     params.require(:post).permit(:kind,:content,:title,:league)
-    
   end
 end

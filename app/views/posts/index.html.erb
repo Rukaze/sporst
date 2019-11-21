@@ -7,9 +7,10 @@
     <% @posts.each do |post| %> 
       <%= link_to( show_path(id: post.id)) do  %>
         <%= post.title %>  <%= l post.created_at, format: :short %>
-        <br>
+        
       <% end %>
       
+      <br>
     <% end %>
   </p>
 </div>
