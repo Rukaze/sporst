@@ -1,4 +1,4 @@
-<div class = "new-post">
+<div id = "new-post">
   <% @sports.each do |sport|  %>
     <%= link_to(new_content_path(kind: sport.kind)) do %>
       <%= sport.kind %>  

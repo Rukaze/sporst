@@ -1,4 +1,4 @@
-<div class = "new-post"> 
+<div id = "edit-post"> 
   <%= form_for(@post, url: post_path(id: @post.id)) do |f| %>
     <%= render "shared/error_messages", model: f.object %>
     <ul>
