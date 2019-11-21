@@ -75,4 +75,26 @@ textarea {
     }
   }
 }
+.post{
+  background-color:#CCCC99;
+  padding-bottom:30px;
+ ul{
+   list-style: none;
+   text-align:  center;
+   li{
+     textarea{
+       width: 50%;
+       height: 10em;
+       font-size: 20px;
+     }
+     .post_title{
+       width: 50%;
+       height: 1em;
+       font-size: 20px;
+     }
+   }
+ }
+ 
+  
+}
 
