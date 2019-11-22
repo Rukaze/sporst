@@ -16,7 +16,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_template 'posts/new'
     post create_path, params: { post: { kind: @league.kind,
                                         league: @league.league,
-                                        titile: "",
+                                        title: "",
                                         content: "" } }
 
     assert_template 'posts/new'
@@ -24,15 +24,15 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
         Contentを入力してください"
   end
   
-  test "should not allow empty content and title" do
-    get edit_path(@post)
-    assert_template 'posts/new'
-    patch eidt_path, params: { post: { kind: @league.kind,
+  test "should not allow empty content and title edit" do
+    get post_edit_path(id: 1)
+    assert_template 'posts/edit'
+    patch post_path(id: 1), params: { post: { kind: @league.kind,
                                         league: @league.league,
-                                        titile: "",
+                                        title: "",
                                         content: "" } }
 
-    assert_template 'posts/new'
+    assert_template 'posts/edit'
     assert_select 'div.alert' , "Titleを入力してください
         Contentを入力してください"
   end
