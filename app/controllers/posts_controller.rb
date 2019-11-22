@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   def league
     @post_kind = params[:kind]
-    @leagues = Sport.where(kind: @post_kind)
     
+    @leagues = Sport.where(kind: @post_kind)
+   
 
   end
   

@@ -1,9 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  kind: MyString
-  league: MyString
+NPB:
+  kind: baseball
+  league: NPB
 
 two:
-  kind: MyString
-  league: MyString
+  kind: soccer
+  league: Laliga
