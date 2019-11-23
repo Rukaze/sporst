@@ -24,6 +24,18 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
         Contentを入力してください"
   end
   
+  test "should  allow correct content and title" do
+    get new_content_path
+    assert_template 'posts/new'
+    post create_path, params: { post: { kind: @league.kind,
+                                        league: @league.league,
+                                        title: "NPB",
+                                        content: "NPB is fun" } }
+
+    assert_template index_path(league: @league.league)
+    #assert_select
+  end
+  
   test "should not allow empty content and title edit" do
     get post_edit_path(id: 1)
     assert_template 'posts/edit'
