@@ -28,6 +28,7 @@ class PostsController < ApplicationController
     @post = Post.new(posts_params)
     if @post.save
       redirect_to index_path(league: @post.league)
+      flash.now[:success] = "投稿しました"
     else
       @kind = @post.kind
       @sports = Sport.select(:kind).distinct
@@ -44,6 +45,7 @@ class PostsController < ApplicationController
     @post =  Post.find(params[:id])
     if @post.update(posts_params)
       redirect_to show_path(id: @post.id)
+      flash[:success] = "編集しました"
     else
       render :edit 
     end
