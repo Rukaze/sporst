@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        '5.1.6'
+gem 'devise'
 gem 'faker'
 gem 'rails-i18n'
 gem 'puma',         '3.9.1'
