@@ -27,3 +27,5 @@ Things you may want to cover:
 git remote set-url heroku https://git.heroku.com/sporst.git
 
 git remote set-url heroku https://git.heroku.com/sporst-test.git
+herokuにブランチをpush
+git push heroku ブランチ名:master
