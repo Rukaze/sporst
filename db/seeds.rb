@@ -10,11 +10,7 @@
   ['soccer', 'Laliga'],
   ['baseball', 'NPB'],
   ['baseball', 'MLB'],
-<<<<<<< HEAD
-  ['マイナースポーツ', '空手']
-=======
   ['other sports', '空手']
->>>>>>> master
 ].each do |kind, league|
   Sport.create!(
     { kind: kind, league: league }
