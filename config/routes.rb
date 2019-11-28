@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+<<<<<<< HEAD
   devise_for :users, controllers: {
   confirmations: 'users/confirmations',
   passwords:     'users/passwords',
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
   unlock:        'users/unlok',
   omniauth:      'users/omniauth'
 }
+=======
+  devise_for :users
+>>>>>>> testserver
   get "new_content" => "posts#new" 
   
   get "sports" => "posts#league"
