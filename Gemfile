@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails',        '5.1.6'
+gem 'rails'
+gem 'devise'
 gem 'faker'
 gem 'rails-i18n'
 gem 'puma',         '3.9.1'
@@ -14,7 +15,7 @@ gem 'bootstrap',    '4.1.1'
 gem 'carrierwave'
 gem 'flexbox-rails'
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
+  gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
 end
 
@@ -34,7 +35,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.20.0'
+  gem 'pg'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります

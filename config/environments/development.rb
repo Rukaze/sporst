@@ -47,6 +47,25 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  # mailer setting
+  host = 'https://30d37941e85948fea53c9d928527393d.vfs.cloud9.ap-northeast-1.amazonaws.com/'     # クラウドIDE
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  # mail setting
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  
+ 
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => 'smtp.gmail.com',
+    :user_name => 'garurajp@gmail.com',
+    :password => 'cilxcsdjddfxbmwf',
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+  
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.

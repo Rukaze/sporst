@@ -1,0 +1,129 @@
+/* universal */
+/* line 7, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+body {
+  padding: 10px 5% 0 5%;
+  font-family: sans-serif;
+}
+
+/* line 12, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+section {
+  overflow: auto;
+}
+
+/* line 16, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 20, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+.center {
+  text-align: center;
+}
+
+/* line 24, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* line 28, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+#logo {
+  font-size: 40px;
+  color: white;
+  float: left;
+  margin: 20px;
+}
+
+/* line 35, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+#header {
+  background-color: #afeeee;
+  height: 100px;
+}
+/* line 38, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+#header .linklist {
+  margin-right: 20px;
+}
+/* line 41, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+#header .linklist li {
+  font-size: 20px;
+  display: -webkit-box;
+  display: flex;
+  float: right;
+  margin: 50px 10px 5px 10px;
+}
+
+/* home */
+/* line 58, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+.sports_index {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 70px auto 0 auto;
+  width: 100%;
+  margin: 0px auto;
+}
+/* line 66, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+.sports_index .sports_images {
+  position: relative;
+  margin: 0;
+  width: 33%;
+}
+/* line 73, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+.sports_index .sports_images p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  color: #ffcc33;
+  text-shadow: 2px  2px 5px black;
+}
+/* line 81, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+.sports_index .sports_images img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 89, /home/ec2-user/environment/sports/app/assets/stylesheets/custom.scss */
+.alert {
+  text-align: center;
+  padding: 10px 0;
+  background-color: palegreen;
+  font-size: 15px;
+  color: #993300;
+}
+/* line 4, /home/ec2-user/environment/sports/app/assets/stylesheets/posts.scss */
+.post {
+  background-color: #CCCC99;
+  padding-bottom: 30px;
+}
+/* line 7, /home/ec2-user/environment/sports/app/assets/stylesheets/posts.scss */
+.post ul {
+  list-style: none;
+  text-align: center;
+}
+/* line 11, /home/ec2-user/environment/sports/app/assets/stylesheets/posts.scss */
+.post ul li textarea {
+  width: 50%;
+  height: 10em;
+  font-size: 20px;
+}
+/* line 16, /home/ec2-user/environment/sports/app/assets/stylesheets/posts.scss */
+.post ul li .post_title {
+  width: 50%;
+  height: 1em;
+  font-size: 20px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
