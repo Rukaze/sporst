@@ -27,15 +27,24 @@ textarea {
 #logo{
   font-size:40px;
   color:white;
+  float:left;
+  margin:20px;
 }
 
 #header{
    background-color:#afeeee;
-   padding: 20px 0 20px 0;
-   li{
+   height:100px;
+  .linklist{
+    margin-right:20px;
+  
+    li{
      font-size:20px;
      display:flex;
-   }
+     float:right;
+     margin:50px 10px 5px 10px;
+    }
+  }
+   
 }
 
 
@@ -83,5 +92,7 @@ textarea {
   font-size:15px;
   color:#993300;
 }
+
+
 
 

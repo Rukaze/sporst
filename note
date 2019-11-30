@@ -7,3 +7,5 @@ git push heroku ブランチ名:master
 
 testserverから移行時の変更点
 ・production hostのapp名
+ヘロクのDBリセット
+heroku pg:reset DATABASE_URL
