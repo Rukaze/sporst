@@ -8,6 +8,7 @@
 
 [ ['basketball', 'NBA'],
   ['soccer', 'Laliga'],
+  ['soccer', 'Premier League'],
   ['baseball', 'NPB'],
   ['baseball', 'MLB'],
   ['other sports', '空手']
