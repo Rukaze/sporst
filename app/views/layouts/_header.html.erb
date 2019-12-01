@@ -4,8 +4,13 @@
       <ul class="linklist">
         <li><%= link_to "About",about_path %></li>
         <li><%= link_to "新規投稿", new_content_path(kind: "baseball") %></li>
-        <li><%= link_to 'ログイン', new_user_session_path, method: :get %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        
+        <% if @current_user.present? %>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>  
+          <li><%= link_to 'ログイン', new_user_session_path, method: :get %></li>
+        <% end %>
+        
         <li><%= link_to "編集", edit_user_registration_path %>
       </ul>
   </div>
