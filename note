@@ -9,3 +9,5 @@ testserverから移行時の変更点
 ・production hostのapp名
 ヘロクのDBリセット
 heroku pg:reset DATABASE_URL
+無料メール
+heroku addons:create sendgrid:starter
