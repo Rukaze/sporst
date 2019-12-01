@@ -7,7 +7,9 @@
   <% end %>
   <%= form_for(@post, url: create_path) do |f| %>
   <%= render "shared/error_messages", model: f.object %>
+    <%= f.hidden_field :user_id, :value => @current_user.id %>
     <ul>
+            
       <li>
         選んだスポーツ
       </li>

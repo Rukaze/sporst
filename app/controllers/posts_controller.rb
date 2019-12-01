@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+  
   def league
     @post_kind = params[:kind]
     
@@ -39,21 +41,32 @@ class PostsController < ApplicationController
   
   def edit
     @post = Post.find(params[:id])
+    if @post.user_id != @current_user.id
+      render :show
+      flash[:danger] = 'ユーザーが違います'
+    end
   end
   
   def update
     @post =  Post.find(params[:id])
-    if @post.update(posts_params)
-      redirect_to show_path(id: @post.id)
-      flash[:success] = "編集しました"
+    if @post.user_id != @current_user.id
+      render :show
     else
-      render :edit 
+      if @post.update(posts_params)
+        redirect_to show_path(id: @post.id)
+        flash[:success] = "編集しました"
+      else
+        render :edit 
+      end
     end
-    
   end
   
+  
+  private
   
   def posts_params
-    params.require(:post).permit(:kind,:content,:title,:league)
+    params.require(:post).permit(:kind,:content,:title,:league,:user_id)
   end
+  
+  
 end
