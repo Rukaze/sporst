@@ -11,3 +11,10 @@ testserverから移行時の変更点
 heroku pg:reset DATABASE_URL
 無料メール
 heroku addons:create sendgrid:starter
+integerをherokuに上げるとき
+if Rails.env.development? || Rails.env.test?
+      change_column :posts, :user_id, :integer
+    else Rails.env.production?
+      # 本番環境はusingオプションを追加
+      change_column :posts, :user_id, 'integer USING CAST(user_id AS integer)'
+    end

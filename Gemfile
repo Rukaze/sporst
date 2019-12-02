@@ -14,6 +14,9 @@ gem 'jbuilder',     '2.7.0'
 gem 'bootstrap',    '4.1.1'
 gem 'carrierwave'
 gem 'flexbox-rails'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
