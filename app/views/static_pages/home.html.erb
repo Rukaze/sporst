@@ -1,18 +1,21 @@
-<div class = "content">  
+<div class = "container-fluid">  
   <h1>スポーツ一覧</h1>
-  <div class = "sports_index">
-    <% @sports.each do |s| %>
-      <div class="sports_images">  
-        <%= link_to( sports_path(kind: s.kind)) do  %>
-                <p><%= s.kind %> </p>
+  <div class = "row">
+    <div class = "sports_index ">
+      <% @sports.each do |s| %>
+        <div class="sports_images">  
+<!--          <%= link_to( sports_path(kind: s.kind)) do  %>
+                  <p><%= s.kind %> </p>
+            
+          <% end %>  -->
           
-        <% end %>
-        
-        <%=  link_to  image_tag("sports_images/#{s.kind}.jpg"), sports_path(kind: s.kind)   %>
-      </div>
-    <% end %>    
+          <%=  link_to  image_tag("sports_images/#{s.kind}.jpg"), sports_path(kind: s.kind), class:'col-xs-6 col-lg-4'%>
+        </div>
+      <% end %>
+    
+    
        
-     
-     
+       
+    </div>
   </div>
-</div>
+</div> 
