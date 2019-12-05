@@ -1,18 +1,14 @@
-<div class = "content">  
+<div class = "container-fluid issei">  
   <h1>スポーツ一覧</h1>
-  <div class = "sports_index">
+  <div class ="row">
     <% @sports.each do |s| %>
-      <div class="sports_images">  
-        <%= link_to( sports_path(kind: s.kind)) do  %>
-                <p><%= s.kind %> </p>
-          
-        <% end %>
-        
+      <div class="col-xs-6 col-lg-4"> 
+       
         <%=  link_to  image_tag("sports_images/#{s.kind}.jpg"), sports_path(kind: s.kind)   %>
       </div>
     <% end %>    
        
      
-     
-  </div>
+    </div>
+  
 </div>

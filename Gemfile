@@ -17,7 +17,7 @@ gem 'flexbox-rails'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'jquery-ui-rails'
-
+gem 'bootstrap-sass'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
