@@ -1,10 +1,10 @@
-<div class = "container-fluid issei">  
+<div class = "container-fluid issei ">  
   <h1>スポーツ一覧</h1>
   <div class ="row">
     <% @sports.each do |s| %>
-      <div class="col-xs-6 col-lg-4"> 
+      <div class=" col-lg-3 col-xs-12 p-0"> 
        
-        <%=  link_to  image_tag("sports_images/#{s.kind}.jpg"), sports_path(kind: s.kind)   %>
+        <%=  link_to  image_tag("sports_images/#{s.kind}.jpg", class: 'img-fluid'), sports_path(kind: s.kind)   %>
       </div>
     <% end %>    
        
