@@ -3,14 +3,14 @@
   <div class ="row">
     <% @sports.each do |s| %>
       <div class="card col-xl-3 col-lg-4 col-sm-6 col-xs-12 p-0">
-        <%=  link_to  image_tag("sports_images/#{s.kind}.jpg", class: 'img-fluid crad-img'), sports_path(kind: s.kind)   %>
+        <%=  link_to(sports_path(kind: s.kind)) do %>
+          <%= image_tag("sports_images/#{s.kind}.jpg", class: 'img-fluid card-img') %>
         <div class="card-img-overlay">
-           <%= link_to(sports_path(kind: s.kind)) do  %>
-             <p class = "h2"><%= s.kind %> </p>
-          <% end %>
+          <p class = "h2"><%= s.kind %> </p>
         </div>
+        <% end %>
       </div>
-    <% end %>    
+    <% end %>
        
      
     </div>
