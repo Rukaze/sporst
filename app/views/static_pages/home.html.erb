@@ -2,9 +2,13 @@
   <h1>スポーツ一覧</h1>
   <div class ="row">
     <% @sports.each do |s| %>
-      <div class=" col-lg-3 col-xs-12 p-0"> 
-       
-        <%=  link_to  image_tag("sports_images/#{s.kind}.jpg", class: 'img-fluid'), sports_path(kind: s.kind)   %>
+      <div class="card col-xl-3 col-lg-4 col-sm-6 col-xs-12 p-0">
+        <%=  link_to  image_tag("sports_images/#{s.kind}.jpg", class: 'img-fluid crad-img'), sports_path(kind: s.kind)   %>
+        <div class="card-img-overlay">
+           <%= link_to(sports_path(kind: s.kind)) do  %>
+             <p class = "h2"><%= s.kind %> </p>
+          <% end %>
+        </div>
       </div>
     <% end %>    
        
@@ -12,3 +16,6 @@
     </div>
   
 </div>
+
+
+
