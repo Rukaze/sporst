@@ -57,8 +57,11 @@ GEM
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
+<<<<<<< HEAD
     bootstrap-will_paginate (1.0.0)
       will_paginate
+=======
+>>>>>>> boot
     builder (3.2.3)
     byebug (9.0.6)
     carrierwave (2.0.2)
@@ -259,7 +262,10 @@ PLATFORMS
 DEPENDENCIES
   bootstrap
   bootstrap-sass
+<<<<<<< HEAD
   bootstrap-will_paginate
+=======
+>>>>>>> boot
   byebug (= 9.0.6)
   carrierwave
   coffee-rails
