@@ -20,6 +20,7 @@ gem 'jquery-ui-rails'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
 gem 'will_paginate'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
