@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_11_24_080402) do
-=======
 ActiveRecord::Schema.define(version: 2019_12_01_111726) do
->>>>>>> testserver
 
   create_table "posts", force: :cascade do |t|
     t.string "kind"
