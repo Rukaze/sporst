@@ -1,5 +1,4 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12,6 +11,24 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- * require_tree .
- * require_self
+ *= require_tree .
+ *= require_self
  */
+
+@import "bootstrap";
+.alert{
+    text-align:center;
+}
+.alert-alert{
+    background-color:#66CCCC;
+}
+
+.naver{
+    background-color:#66CCCC;
+}
+ul {
+  list-style: none;
+}
+#content{
+    height:300px;
+}

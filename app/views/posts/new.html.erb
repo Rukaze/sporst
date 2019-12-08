@@ -1,42 +1,45 @@
-<div class = "post">
-  <% @sports.each do |sport|  %>
-    <%= link_to(new_content_path(kind: sport.kind)) do %>
-      <%= sport.kind %>  
-      <br>
+<div class = "text-center h4">
+  <div class = "m-3">
+    <a class="h4">投稿したいリーグを選択してください</a><br>  
+    <% @sports.each do |sport|  %>
+      <%= link_to(new_content_path(kind: sport.kind),class:'p-3 h4') do %>
+        <%= sport.kind %>  
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
   <%= form_for(@post, url: create_path) do |f| %>
   <%= render "shared/error_messages", model: f.object %>
     <%= f.hidden_field :user_id, :value => @current_user.id %>
-    <ul>
-            
+    <ul class ="m-2">
       <li>
         選んだスポーツ
       </li>
-      <li>
+      <li class ="m-2">
         <%= @kind %>
         <%= f.hidden_field :kind, :value => @kind %>
       </li>
       
-      <li>
+      <li class ="m-2">
         投稿したいリーグ
       </li>
-      <li>
+      <li class ="m-2">
         <%= f.collection_select :league, @leagues, :league ,:league %>
       </li>
-      <li>
+      <li class ="m-2">
         <%= f.label :title %>
       </li>
-      <li>
+      <li class ="m-2">
         <%= f.text_field :title, value: @post.title, :class => 'post_title'  %>
       </li>
-      <li>
-        <%= f.label :content %>
-      </li>
-      <li>
-        <%= f.text_area :content,value: @post.content %>
-      </li>
-        <li><%= f.submit "新規投稿" %>
+      <div id ="content">
+        <li class ="m-2">
+          <%= f.label :content %>
+        </li>
+        <a class ="m-2 ">
+            <%= f.text_area :content,value: @post.content,class:'w-75 h-75' %>
+        </a><br>
+      </div>
+      <li><%= f.submit "新規投稿" %>
       </li>
     </ul>
   <% end %>

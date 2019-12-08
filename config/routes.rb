@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   
   devise_for :users
+  get '/users', to: redirect("/users/sign_up")
   get "new_content" => "posts#new" 
   
   get "sports" => "posts#league"
