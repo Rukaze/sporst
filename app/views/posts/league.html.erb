@@ -7,7 +7,7 @@
   <div class ="row">
     <% @leagues.each do |l| %>
       <div class="card col-xl-3 col-lg-4 col-sm-6 col-xs-12 p-0">
-        <%=  link_to(index_path(kind: l.league)) do %>
+        <%=  link_to(index_path(league: l.league)) do %>
           <%= image_tag("leagues_images/#{l.league}.jpg", class: 'img-fluid card-img') %>
         <div class="card-img-overlay">
           <p class = "h2"><%= l.league %> </p>
