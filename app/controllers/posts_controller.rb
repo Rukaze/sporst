@@ -61,6 +61,10 @@ class PostsController < ApplicationController
     end
   end
   
+  def user_posts
+    @sports = Sport.select(:kind).distinct
+  end
+  
   
   private
   

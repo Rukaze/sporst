@@ -2,15 +2,15 @@
 <div class = "title">
   <h1> <%= "#{@post_league}" %> </h1>
 </div>
-<div class = "title-index">
-  <p>
-    <% @posts.each do |post| %> 
-      <%= link_to( show_path(id: post.id)) do  %>
-        <%= post.title %>  <%= l post.created_at, format: :short %>
-        
-      <% end %>
+<div class = "text-center">
+  
+  <% @posts.each do |post| %> 
+    <%= link_to( show_path(id: post.id)) do  %>
+      <%= post.title %>  <%= l post.created_at, format: :short %>
       
-      <br>
     <% end %>
-  </p>
+    
+    <br>
+  <% end %>
+  
 </div>

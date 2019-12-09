@@ -1,23 +1,24 @@
-<div class = "post"> 
+<div class = "text-center"> 
   <%= form_for(@post, url: post_path(id: @post.id)) do |f| %>
     <%= render "shared/error_messages", model: f.object %>
     <ul>
-      <li>
-        <%= @post.kind %>  <%= @post.league %>
-         
+      <li class="h3 m-3">
+        <%= @post.league %>
       </li>
-      <li>
+      <li class="h4 m-2">
         <%= f.label :title %>
       </li>
       <li>
         <%= f.text_field :title, value: @post.title , :class => 'post_title'%>
       </li>
-      <li>
-        <%= f.label :content %>
-      </li>
-      <li>
-        <%= f.text_area :content,value: @post.content %>
-      </li>
+      <div id ="content">
+        <li class ="m-2 h4">
+          <%= f.label :content %>
+        </li>
+        <a class ="m-2 ">
+            <%= f.text_area :content,value: @post.content,class:'w-75 h-75' %>
+        </a><br>
+      </div>
         <li><%= f.submit "編集する" %>
       </li>
     </ul>

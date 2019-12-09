@@ -1,0 +1,14 @@
+<div class = "text-center">
+  <% @sports.each do |s| %>
+    <% if Post.where(user_id: @current_user.id).where(kind: s.kind).exists? %>
+      <%= s.kind %><br>
+    <% end %>
+    <% @posts = Post.where(user_id: @current_user.id).where(kind: s.kind) %>
+    <% @posts.each do |post| %>
+      <%= link_to( show_path(id: post.id)) do  %>
+        <%= post.title %>  <%= l post.created_at, format: :short %>
+      <% end %>
+    <br>
+    <% end %>
+  <% end %>
+</div>

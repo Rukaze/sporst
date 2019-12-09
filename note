@@ -21,4 +21,4 @@ if Rails.env.development? || Rails.env.test?
       change_column :posts, :user_id, 'integer USING CAST(user_id AS integer)'
     end
     
-rails assets:precompile 
+rails assets:precompile

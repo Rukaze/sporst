@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   get '/users', to: redirect("/users/sign_up")
   get "new_content" => "posts#new" 
-  
+  get 'user_posts' => "posts#user_posts"
   get "sports" => "posts#league"
   get "show" => "posts#show"
   get "index" => "posts#index"
