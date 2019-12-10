@@ -29,6 +29,16 @@
 ul {
   list-style: none;
 }
-#content{
+.content{
     height:300px;
+}
+.back{
+    background-color:#CCFFFF;
+}
+.change{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+#post_league{
+    padding: 1px 15% 1px 15%;
 }

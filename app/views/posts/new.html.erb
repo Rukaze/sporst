@@ -18,7 +18,6 @@
         <%= @kind %>
         <%= f.hidden_field :kind, :value => @kind %>
       </li>
-      
       <li class ="m-2">
         投稿したいリーグ
       </li>
@@ -29,17 +28,16 @@
         <%= f.label :title %>
       </li>
       <li class ="m-2">
-        <%= f.text_field :title, value: @post.title, :class => 'post_title'  %>
+        <%= f.text_field :title, value: @post.title, :class => 'w-75'  %>
       </li>
-      <div id ="content">
-        <li class ="m-2">
-          <%= f.label :content %>
-        </li>
-        <a class ="m-2 ">
-            <%= f.text_area :content,value: @post.content,class:'w-75 h-75' %>
-        </a><br>
-      </div>
-      <li><%= f.submit "新規投稿" %>
+      <li class ="m-2">
+        <%= f.label :content %>
+      </li>
+      <a class ="m-2 ">
+          <%= f.text_area :content,value: @post.content,class:'w-75 content m-4' %>
+      </a><br>
+      <li class= 'pb-4'>
+         <%= f.submit "新規投稿",class:'w-25 btn btn-primary'%>
       </li>
     </ul>
   <% end %>
