@@ -5,13 +5,19 @@
 <div class = "text-center">
   
   <% @posts.each do |post| %>
+    <div class = 'container float-left'>
+      <%= link_to( show_path(id: '4')) do  %>
+        <%= User.find_by(id: post.user_id).username%>
+      <% end %>
+    </div>
     <%= link_to( show_path(id: post.id)) do  %>
       <div class = 'container p-4 border mb-1'>
         <%= post.title %>  <%= l post.created_at, format: :minimum %>
+        
       </div>
+     
     <% end %>
-    <br>
-    
+      
   <% end %>
   
 </div>
