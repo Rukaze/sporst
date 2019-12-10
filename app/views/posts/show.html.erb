@@ -3,7 +3,7 @@
 <%end%>
 
 <h1><%= @post.title %></h1>
-<p>
+<p class= 'change'>
   <%= @post.content %> 
 </p>
-<p><%= link_to( "編集" ,post_edit_path(id: @post.id)) if @post.user_id == @current_user.id %></p>
+<p><%= link_to( "編集" ,post_edit_path(id: @post.id)) if @post.user_id == @current_user.id if @current_user.present? %></p>
