@@ -8,7 +8,7 @@
     <div class = 'container float-left'>
       <%= link_to( show_path(id: '4')) do  %>
         <% user = User.find_by(id: post.user_id)%>
-        <%= user.username unless user.username.nil? %>
+        <%= user.username %>
       <% end %>
     </div>
     <%= link_to( show_path(id: post.id)) do  %>
