@@ -6,8 +6,8 @@
   
   <% @posts.each do |post| %>
     <div class = 'container float-left'>
-      <%= link_to( show_path(id: '4')) do  %>
-        <% user = User.find_by(id: post.user_id)%>
+      <% user = User.find_by(id: post.user_id)%>
+      <%= link_to( user_page_path(id: user.id)) do  %>
         <%= user.username %>
       <% end %>
     </div>
