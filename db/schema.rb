@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_12_13_114349) do
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "kind"
     t.text "title"
     t.datetime "created_at", null: false
@@ -22,14 +22,14 @@ ActiveRecord::Schema.define(version: 2019_12_13_114349) do
     t.integer "user_id"
   end
 
-  create_table "sports", force: :cascade do |t|
+  create_table "sports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "kind"
     t.string "league"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

@@ -18,9 +18,11 @@ gem 'devise-i18n-views'
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass', '3.3.7'
 gem 'carrierwave'
+gem 'yaml_db'
+gem 'mysql2', '~> 0.4.4'
+gem 'psych', '~> 2.2.1'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
 end
 
@@ -39,9 +41,7 @@ group :test do
   gem 'guard-minitest',           '2.4.4'
 end
 
-group :production do
-  gem 'pg'
-end
+
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
