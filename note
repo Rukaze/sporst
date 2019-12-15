@@ -24,3 +24,4 @@ if Rails.env.development? || Rails.env.test?
 rails assets:precompile
 
 sudo service mysqld start
+mysql -u [ユーザー名] -p
