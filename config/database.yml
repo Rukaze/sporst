@@ -23,6 +23,6 @@ test:
 
 production:
   <<: *default
-  database: sports_production
-  username: sports_app
-  password: <%= ENV['SAMPLE_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %> 
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
