@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
+  include PostsHelper
   
   def league
     @post_kind = params[:kind]
@@ -12,23 +13,18 @@ class PostsController < ApplicationController
   def index
     @posts = Post.where(league: params[:league])
     @post_league = params[:league]
-    if user_signed_in?
+    if user_signed_in? and @post_league != current_user.s_history and @post_league != current_user.f_history and @post_league != current_user.t_history 
       if current_user.s_history.present?
         current_user.t_history = current_user.s_history
-        if current_user.save!
-        else current_user.update
-        end
+      save_history()
+        
       end
       if current_user.f_history.present?
         current_user.s_history = current_user.f_history
-        if current_user.save!
-        else  current_user.update
-        end
+      save_history()
       end
       current_user.f_history = @post_league
-      if  current_user.save!
-      else current_user.update
-      end
+      save_history()
     end
   end
 
