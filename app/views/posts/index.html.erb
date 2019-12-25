@@ -2,7 +2,7 @@
 <div class = "text-center">
   <h1> <%= "#{@post_league}" %> </h1>
 </div>
-<div class = "text-center">
+<div class = "text-center post-index">
   
   <% @posts.each do |post| %>
     <div class = 'container float-left'>
@@ -14,11 +14,7 @@
     <%= link_to( show_path(id: post.id)) do  %>
       <div class = 'container p-4 border mb-1'>
         <%= post.title %>  <%= l post.created_at, format: :minimum %>
-        
       </div>
-     
     <% end %>
-      
   <% end %>
-  
 </div>

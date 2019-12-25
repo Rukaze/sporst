@@ -22,7 +22,7 @@ gem 'mini_magick'
 gem 'yaml_db'
 gem 'mysql2', '~> 0.4.4'
 gem 'psych', '~> 2.2.1'
-
+gem 'webpacker'
 group :development, :test do
   gem 'byebug',  '9.0.6', platform: :mri
 end

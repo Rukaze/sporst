@@ -11,6 +11,14 @@
 # column: value
 john:
   id: 1
+  username: john
   email: "john@example.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  confirmed_at: <%= Time.now - 100 %>
+  
+tako:
+  id: 2
+  username: tako
+  email: "tako@example.com"
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
   confirmed_at: <%= Time.now - 100 %>

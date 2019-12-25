@@ -10,11 +10,13 @@
           <li><%= link_to "About",about_path , class: 'nav-link h4 mr-4'%></li>
        
         </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+             <li><%= link_to "新規投稿", new_content_path(kind: "baseball"), class: 'nav-link h4 mr-4'%></li>
+          </li>
+        <% end %>
         <li class="nav-item">
-           <li><%= link_to "新規投稿", new_content_path(kind: "baseball"), class: 'nav-link h4 mr-4'%></li>
-        </li>
-        <li class="nav-item">
-          <% if @current_user.present? %>
+          <% if user_signed_in? %>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link h4 mr-4' %>
           <% else %>
             <%= link_to 'ログイン', new_user_session_path, method: :get, class: 'nav-link h4 mr-4' %>

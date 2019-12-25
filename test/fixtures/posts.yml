@@ -7,3 +7,11 @@ one:
   title: title
   content: content
   user_id: 1
+
+two:
+  id: 2
+  kind: baseball
+  league: NPB
+  title: ok
+  content: gg
+  user_id: 2

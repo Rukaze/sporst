@@ -3,10 +3,13 @@
   <%= render 'layouts/head' %>
   
   <body>
+    <div>
     <%= render 'layouts/header' %>
     <%= render 'layouts/flash' %>
     <div class = 'back'>
       <%= yield %>
     </div>
+    </div>
+    <%= javascript_pack_tag 'hello_vue' %> 
   </body>
 </html>
